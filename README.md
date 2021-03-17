@@ -1,7 +1,7 @@
-# project-one
+# Got Munchies?
 
 As a HUNGRY CONSUMER,
 
 I would like to FIND a restaurant that suits my requirements for distance, dietary restrictions, and/or craved style of food.
 
-SO that I can decide what to eat while broadening my horizons on local restaurants.
+SO THAT I can decide what to eat while broadening my horizons on local restaurants.
