@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +7,21 @@
     <link rel="stylesheet" href="./assets/style.css">
     <title>Got Munchies?</title>
 </head>
-
 <body>
-
+    
     <header>
         <h1 class="text-center">Got Munchies?</h1>
-        <h2 class="text-center">We'll help you figure out what to eat and where with ease!</h2>
-    
-        <div class="container">
-            <nav class="navBar">
-                <ul class="links">
-                    <a href="#home">Got Munchies?</a>
-                    <a href="#contact">Contact</a>
-                </ul>
-            </nav>
+        <h5 class="text-center">We'll help you figure out what to eat and where with ease!</h5>
     </header>
+  
+    <div class= "container">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
         <div class= "zipcode">
         <form action="/action_page.php" method="get">
             <label for="zipcode">Zip Code:</label>
@@ -68,7 +67,21 @@
             <label for="italian">Italian:</label><br>
             <input type="checkbox" id="italian" name="italian-option" ><br>
           </form>
+        <div>
+          <h2>Special requests?/h2>
+          <form class="dietaryForm">
+              <label for="keto">Keto</label><br>
+              <input type="checkbox" id="keto" name="keto-option"><br>
+              <label for="vv">Vegan/Vegetarian</label><br>
+              <input type="checkbox" id="vv" name="vv-option"><br>
+              <label for="gf">Gluten Free</label><br>
+              <input type="checkbox" id="gf" name="gf-option"><br>
+              <label for="kosher">Kosher</label><br>
+              <input type="checkbox" id="kosher" name="kosher-option"><br>
+              <label for="halal">Halal</label><br>
+              <input type="checkbox" id="halal" name="halal-option"><br>
+            </form>
+        </div>
     <script src="./assets/script.js"></script>
 </body>
-
 </html>
