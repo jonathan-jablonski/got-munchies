@@ -66,9 +66,23 @@ label{
     display: flex;
     justify-content: center;
 }
-
-footer{
+.form{
+    padding: 10px;
     
+}
+
+.restriction{
+    margin-left: 15px;
+}
+
+#mexican, #italian, #ethiopian, #asian, #cafe, #palestinian{
+    position: relative;
+    bottom: 1.5rem;
+}
+
+#vegan, #vegetarian, #keto, #paleo, #pescatarian, #kosher{
+    position: relative;
+    bottom: 1.5rem;
 }
 
 
