@@ -18,11 +18,7 @@ header::after{
     text-align: center;
     margin: auto;
     display:block;
-<<<<<<< Updated upstream
-    color: black;
-=======
     color:black;
->>>>>>> Stashed changes
     font-family: 'Pathway Gothic One', sans-serif;
     text-transform: lowercase;
     
@@ -86,7 +82,7 @@ footer{
 @media only screen and (min-width:
 768px){
     body{
-        background-color: salmon;
+        background-color: beige;
     }
 }
 @media only screen and (min-width:
