@@ -4,7 +4,7 @@ body{
 
 }
 header{
-    background: cadetblue;
+    background: white;
     padding: 20px;
 }
 header::after{
@@ -18,12 +18,13 @@ header::after{
     text-align: center;
     margin: auto;
     display:block;
-    color: white;
+    color: black;
+    font-weight: 300;
     
 }
 
 .slogan{
-    color: white;
+    color: black;
 }
 
 nav ul{
@@ -52,6 +53,11 @@ label{
     display: flex;
     justify-content: center;
 }
+
+#dining{
+
+}
+
 .takeout{
     display: flex;
     justify-content: center;
@@ -63,6 +69,9 @@ label{
     justify-content: center;
 }
 
+#footer{
+    background-color: cadetblue;
+}
 
 
 
