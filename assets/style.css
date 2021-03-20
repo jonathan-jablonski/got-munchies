@@ -13,6 +13,18 @@ header::after{
 
 }
 
+.got-munchies{
+    text-align: center;
+    margin: auto;
+    display:block;
+    color: white;
+    
+}
+
+.slogan{
+    color: white;
+}
+
 nav ul{
     margin: 0;
     padding: 0;
