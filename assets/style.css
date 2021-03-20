@@ -1,5 +1,6 @@
 body{
     background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 header{
@@ -42,10 +43,27 @@ nav a{
     text-transform: uppercase;
 
 }
+label{
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+.zipcode{
+    display: flex;
+    justify-content: center;
+}
+.takeout{
+    display: flex;
+    justify-content: center;
+
+}
+
 .is-mobile{
     display: flex;
     justify-content: center;
 }
+
+
 
 
 @media only screen and (min-width:
