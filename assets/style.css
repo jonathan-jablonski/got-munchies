@@ -18,7 +18,11 @@ header::after{
     text-align: center;
     margin: auto;
     display:block;
+<<<<<<< Updated upstream
     color: black;
+=======
+    color:black;
+>>>>>>> Stashed changes
     font-family: 'Pathway Gothic One', sans-serif;
     text-transform: lowercase;
     
