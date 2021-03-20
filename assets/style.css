@@ -18,8 +18,9 @@ header::after{
     text-align: center;
     margin: auto;
     display:block;
-    color: black;
-    font-weight: 300;
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-transform: lowercase;
     
 }
 
