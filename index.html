@@ -27,12 +27,21 @@
             <form action="/action_page.php" method="get">
                 <label for="zipcode">Zip Code:</label>
                 <input type="text" id="zipcode" name="zipcode">
-                <input type="submit" value="Submit"><br><br>
+                <input type="submit" value="Submit">
             </form>
         </div>
-        <div class="takeout">
-            <label for="cars">Choose a dining option:</label><br>
+        <div class="radius">
+            <label for="radius">Within what mile radius?:</label>
 
+            <select name="radius" id="radius">
+              <option value="5mi">5 miles</option>
+              <option value="10mi">10 miles</option>
+              <option value="15mi">15 miles</option>
+              <option value="20mi">20 miles</option>
+            </select>
+        </div>
+        <div class="takeout"><br><br>
+            <label for="cars">Choose a dining option:</label><br>
             <select name="dining" id="dining">
                 <option value="dineIn">Dine In</option>
                 <option value="takeout">Takeout</option>
@@ -41,7 +50,7 @@
         </div>
     </div>
 
-    <div>
+    <div><br><br>
         <h2>Whatcha Feeling?</h2>
         <form class="cuisineForm">
             <label for="mexican">Mexican</label><br>
