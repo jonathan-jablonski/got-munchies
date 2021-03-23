@@ -53,16 +53,17 @@ label{
 .zipcode{
     display: flex;
     justify-content: center;
-    position: relative;
-    right: 3rem;;
+    margin: 5px;
 }
+
 #zipcode{
     border-radius: 15px;
 }
 
 .miRaidus{
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    margin: 5px; 
 }
 
 #radius{
@@ -73,6 +74,7 @@ label{
 .takeout{
     display: flex;
     justify-content: center;
+    margin: 5px;
 
 }
 
