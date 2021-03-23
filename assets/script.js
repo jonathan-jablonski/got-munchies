@@ -8,7 +8,7 @@ var zipCode = document.getElementById("zipcode").textContent
 
 $(submitButton).click(function (event) {
     event.preventDefault();
-    locationSearch = $(zipCode).val().trim();
+    locationSearch = $(zipCode);
     $.ajax({
     dataType: "json",
     url: "https://api.foursquare.com/v2/venues/explore?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20180323&limit=1&ll=40.7243,-74.0018&query=coffee",
@@ -17,7 +17,10 @@ $(submitButton).click(function (event) {
       // Code for handling API response
       console.log(data);
      var theCall = response.data;
-    }
-    //error: function(jqXHR, textStatus, errorThrown) {
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
       // Code for handling errors
     console.log(data)
+    }
+    })
+})
