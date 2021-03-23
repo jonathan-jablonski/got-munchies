@@ -53,7 +53,10 @@ label{
 .zipcode{
     display: flex;
     justify-content: center;
+    position: relative;
+    right: 3rem;;
 }
+
 
 .miRaidus{
     display: flex;
