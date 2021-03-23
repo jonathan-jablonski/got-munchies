@@ -53,16 +53,28 @@ label{
 .zipcode{
     display: flex;
     justify-content: center;
+    margin: 5px;
+}
+
+#zipcode{
+    border-radius: 15px;
 }
 
 .miRaidus{
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    margin: 5px; 
+}
+
+#radius{
+    border-radius: 15px;
+
 }
 
 .takeout{
     display: flex;
     justify-content: center;
+    margin: 5px;
 
 }
 
@@ -81,6 +93,7 @@ label{
 
 #dining{
     padding-left: 10px;
+    border-radius: 15px;
 
 }
 #mexican, #italian, #ethiopian, #asian, #cafe, #palestinian{
