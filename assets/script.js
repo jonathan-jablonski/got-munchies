@@ -25,4 +25,3 @@ $(submitButton).click(function (event) {
     console.log()
     }
     })
-})
