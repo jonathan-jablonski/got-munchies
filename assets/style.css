@@ -55,6 +55,10 @@ label{
     justify-content: center;
 }
 
+.miRaidus{
+    display: flex;
+    justify-content: center; 
+}
 
 .takeout{
     display: flex;
