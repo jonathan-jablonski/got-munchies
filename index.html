@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/style.css">
     <title>Got Munchies?</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -22,13 +22,27 @@
     <div class="container"><br>
         <div class="zipcode">
             <form method="get">
+    <div class="container">
+        <div class="zipcode">
+            <form action="/action_page.php" method="get">
                 <label for="zipcode">Zip Code:</label>
                 <input type="text" id="zipcode" name="zipcode">
             </form>
         </div>
+
         <div class="takeout">
             <label for="cars">Choose a dining option:</label><br>
-
+        <div class="miRaidus">
+            <label for="radius">What mile radius:</label><br>
+            <select name="raidus" id="radius">
+                <option value="5mi">5 miles</option>
+                <option value="10mi">10 miles</option>
+                <option value="15mi">15 miles</option>
+                <option value="20mi">20 miles</option>
+            </select>
+        </div>
+        <div class="takeout">
+            <label for="cars">Choose a dining option:</label><br>
             <select name="dining" id="dining">
                 <option value="dineIn">Dine In</option>
                 <option value="takeout">Takeout</option>
@@ -40,6 +54,7 @@
     <div  class="is-mobile form">
         <div class="whatchaFeeling">
             <h2 id="feeling-subtitle">Whatcha Feeling?</h2>
+            <h2 id="feeling-subtitle">Whatcha Feeling?</h2><br>
             <form class="cuisineForm">
                 <label for="mexican">Mexican</label><br>
                 <input type="checkbox" id="mexican" name="mexican-option"><br>
@@ -59,6 +74,7 @@
 
         <div class="restriction">
             <h3 id="restrictions-subtitle">Any Dietery Restrictions?</h3>
+            <h3 id="restrictions-subtitle">Any Dietery Restrictions?</h3><br>
             <form class="restrictionForm">
                 <label for="vegan">Vegan</label><br>
                 <input type="checkbox" id="vegan" name="vegan-option"><br>
@@ -89,9 +105,6 @@
             </p>
         </div>
     </footer>
-
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
