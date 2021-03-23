@@ -27,3 +27,15 @@ $(submitButton).click(function (event) {
     console.log()
     }
     })
+});
+
+// Function to fetch restaurants based on user-specified criteria
+
+
+// Function to randomly select a restaurant from an array
+
+
+// Function that fetches map of restaurant's latitude and longitude
+
+
+// Function for pop-up modal that displays restaurant, address, map of surrounding area
