@@ -1,3 +1,5 @@
+27 lines (25 sloc)  907 Bytes
+  
 // MapQuest API
 // clientSecret = "77gRNKAyNsP05LND";
 // key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
