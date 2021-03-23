@@ -1,4 +1,4 @@
-27 lines (25 sloc)  907 Bytes
+
   
 // MapQuest API
 // clientSecret = "77gRNKAyNsP05LND";
@@ -21,6 +21,7 @@ $(submitButton).click(function (event) {
       // Code for handling API response
       console.log(data);
      var theCall = data;
+     $(".modal1").addClass("is-active")
     },
     error: function(jqXHR, textStatus, errorThrown) {
       // Code for handling errors
@@ -28,7 +29,9 @@ $(submitButton).click(function (event) {
     }
     })
 });
-
+$(".buttonCancelModal").click(function() {
+  $(".modal1").removeClass("is-active");
+});
 // Function to fetch restaurants based on user-specified criteria
 
 
