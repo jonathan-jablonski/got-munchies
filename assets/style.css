@@ -1,9 +1,10 @@
 body{
     background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 header{
-    background: cadetblue;
+    background: white;
     padding: 20px;
 }
 header::after{
@@ -11,6 +12,20 @@ header::after{
     display: table;
     clear: both;
 
+}
+
+.got-munchies{
+    text-align: center;
+    margin: auto;
+    display:block;
+    color:black;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-transform: lowercase;
+    
+}
+
+.slogan{
+    color: black;
 }
 
 nav ul{
@@ -30,18 +45,66 @@ nav a{
     text-transform: uppercase;
 
 }
+label{
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+.zipcode{
+    display: flex;
+    justify-content: center;
+}
+
+.miRaidus{
+    display: flex;
+    justify-content: center; 
+}
+
+.takeout{
+    display: flex;
+    justify-content: center;
+
+}
+
+.is-mobile{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    padding: 10px;
+    
+}
+
+.restriction{
+    margin-left: 15px;
+}
+
+#dining{
+    padding-left: 10px;
+
+}
+#mexican, #italian, #ethiopian, #asian, #cafe, #palestinian{
+    position: relative;
+    bottom: 1.5rem;
+}
+
+#vegan, #vegetarian, #keto, #paleo, #pescatarian, #kosher{
+    position: relative;
+    bottom: 1.5rem;
+}
+
 
 
 @media only screen and (min-width:
 320px){
     body{
-        background-color: aqua;
+        background-color:beige;
     }
 }
 @media only screen and (min-width:
 768px){
     body{
-        background-color: salmon;
+        background-color: beige;
     }
 }
 @media only screen and (min-width:
