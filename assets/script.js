@@ -44,8 +44,7 @@ $(submitButton).click(function (event) {
     $.ajax({
     dataType: "json",
     url: `https://api.foursquare.com/v2/venues/explore?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&near="${locationSearch}"&v=20210324&limit=5&radius=${radiusSelect}&categoryId=${foodCategory}`,
-    data: {locationSearch},
-=======
+    data: {locationSearch};
   event.preventDefault();
   locationSearch = zipCode.text();
   $.ajax({
