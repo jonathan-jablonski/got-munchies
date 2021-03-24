@@ -86,6 +86,10 @@ label{
     padding: 10px;
     
 }
+.whatchaFeeling{
+    margin-left: 15px;
+
+}
 
 .restriction{
     margin-left: 15px;
@@ -104,6 +108,11 @@ label{
 #vegan, #vegetarian, #keto, #paleo, #pescatarian, #kosher{
     position: relative;
     bottom: 1.5rem;
+}
+
+.submitDiv{
+    display: flex;
+    justify-content: center;
 }
 
 

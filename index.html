@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Got Munchies?</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -16,19 +16,21 @@
 
     <header>
         <a class="got-munchies has-text-centered is-size-2" href=#home>Got Munchies?</a>
-        <h2 class="slogan is-size-5 has-text-centered">We'll help you figure out what to eat and where with ease!</h5>
+        <h5 class="slogan is-size-5 has-text-centered">We'll help you figure out what to eat and where with ease!</h5>
     </header>
 
     <div class="container"><br>
         <div class="zipcode">
             <form method="get">
-    <div class="container">
-        <div class="zipcode">
-            <form action="/action_page.php" method="get">
-                <label for="zipcode">Zip Code:</label>
-                <input type="text" id="zipcode" name="zipcode">
+                <div class="container">
+                    <div class="zipcode">
+                        <form action="/action_page.php" method="get">
+                            <label for="zipcode">Zip Code:</label>
+                            <input type="text" id="zipcode" name="zipcode">
+                        </form>
+                    </div>
+                </div>
             </form>
-        </div>
 
         <div class="takeout">
             <label for="cars">Choose a dining option:</label><br>
@@ -68,7 +70,29 @@
                 <label for="palestinian">Palestinian</label><br>
                 <input type="checkbox" id="palestinian" name="italian-option" value=",4bf58dd8d48988d115941735"><br>
             </form>
+=======
+        </div>
 
+        <!--<div class="takeout">
+        <label for="cars">Choose a dining option:</label><br>-->
+            <div class="miRaidus">
+                <label for="radius">What mile radius:</label><br>
+                <select name="raidus" id="radius">
+                    <option value="5mi">5 miles</option>
+                    <option value="10mi">10 miles</option>
+                    <option value="15mi">15 miles</option>
+                    <option value="20mi">20 miles</option>
+                </select>
+            </div>
+
+            <div class="takeout">
+                <label for="cars">Choose a dining option:</label><br>
+                <select name="dining" id="dining">
+                    <option value="dineIn">Dine In</option>
+                    <option value="takeout">Takeout</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+            </div>
         </div>
 
         <div class="restriction">
@@ -99,10 +123,101 @@
                 <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
                 is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
             </p>
+=======
+        <div class="is-mobile form">
+            <div class="whatchaFeeling">
+                <!--<h2 id="feeling-subtitle">Whatcha Feeling?</h2>-->
+                <h2 id="feeling-subtitle">Whatcha Feeling?</h2><br>
+                <form class="cuisineForm">
+                    <label for="mexican">Mexican</label><br>
+                    <input type="checkbox" id="mexican" name="mexican-option"><br>
+                    <label for="italian">Italian</label><br>
+                    <input type="checkbox" id="italian" name="italian-option"><br>
+                    <label for="ethiopian">Ethiopian</label><br>
+                    <input type="checkbox" id="ethiopian" name="ethiopian-option"><br>
+                    <label for="asian">Asian</label><br>
+                    <input type="checkbox" id="asian" name="asian-option"><br>
+                    <label for="cafe">Cafe</label><br>
+                    <input type="checkbox" id="cafe" name="cafe-option"><br>
+                    <label for="palestinian">Palestinian</label><br>
+                    <input type="checkbox" id="palestinian" name="italian-option"><br>
+                </form>
+
+            </div>
+
+            <div class="restriction">
+                <!--<h3 id="restrictions-subtitle">Any Dietery Restrictions?</h3>-->
+                <h3 id="restrictions-subtitle">Any Dietery Restrictions?</h3><br>
+                <form class="restrictionForm">
+                    <label for="vegan">Vegan</label><br>
+                    <input type="checkbox" id="vegan" name="vegan-option"><br>
+                    <label for="vegetarian">Vegetarian</label><br>
+                    <input type="checkbox" id="vegetarian" name="vegetarian-option"><br>
+                    <label for="keto">Keto</label><br>
+                    <input type="checkbox" id="keto" name="keto-option"><br>
+                    <label for="paleo">Paleo</label><br>
+                    <input type="checkbox" id="paleo" name="paleo-option"><br>
+                    <label for="pescatarian">Pescatarian</label><br>
+                    <input type="checkbox" id="pescatarian" name="pescatarian-option"><br>
+                    <label for="kosher">Kosher</label><br>
+                    <input type="checkbox" id="kosher" name="kosher-option"><br>
+                </form>
+
+            </div>
+
+            <!--<div>
+                <button id="submit">Submit</button>
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>GOT MUNCHIES?</strong> by <a href="https://jgthms.com">MUNCHIES GROUP
+                            LLC</a>. The source
+                        code is licensed
+                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website
+                        content
+                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA
+                            4.0</a>.
+                    </p>
+                </div>
+            </footer>-->
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./assets/script.js"></script>
+
+        <div class="submitDiv">
+            <button id="submit">Submit</button>
+        </div>
+        <div class="modal modal1">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button buttonCancelModal">Cancel</button>
+              </footer>
+            </div>
+          </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>GOT MUNCHIES?</strong> by <a href="https://jgthms.com">MUNCHIES GROUP
+                        LLC</a>. The source
+                    code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website
+                    content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA
+                        4.0</a>.
+                </p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./assets/script.js"></script>
 </body>
 
 </html>
