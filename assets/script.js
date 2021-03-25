@@ -43,6 +43,7 @@ function restaurantsByCategory(event){
       // Code for handling API response
       console.log(data);
      var theCall = data;
+     $(".modal").addClass("is-active")
     },
     error: function(jqXHR, textStatus, errorThrown) {
       // Code for handling errors
@@ -52,7 +53,9 @@ function restaurantsByCategory(event){
     // target checkboxes
   })
 };
-
+$(".buttonCancelModal").click(function(){
+    $(".modal1").removeClass("is-active");
+});
 
 // Function to randomly select a restaurant from an array
 // After we have gotten our user's choices from foursquare, 
