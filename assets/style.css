@@ -13,7 +13,9 @@ header::after{
     clear: both;
 
 }
-
+.restaurant-name {
+    color: dodgerblue;
+}
 .got-munchies{
     text-align: center;
     margin: auto;
