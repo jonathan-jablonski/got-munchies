@@ -2,7 +2,7 @@
 // clientSecret = "77gRNKAyNsP05LND";
 // key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
 
-var submitButton = document.getElementById("submit")
+var submitButton = document.getElementsByClassName("submit")
 var zipCode = $("#zipcode")
 var CLIENT_ID =  "SQM3255VG0KCQPCFOPM5RF1S3S22Q2BMNV3OUZEHT4QIQA2H"
 var CLIENT_SECRET = "1NDCPEPMM5FJQV4HHXKQOLFGHOD54VE2DBSKFG41CUQBHLJ4"
