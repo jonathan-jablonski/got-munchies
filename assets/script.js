@@ -64,6 +64,23 @@ $(submitButton).click(restaurantsByCategory)
 //   var val = $(this).val();
 //   foodCategory.push(val);
 // });
+$(submitButton).click(function (event) {
+  event.preventDefault();
+  L.mapquest.key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
+  var map = L.mapquest.map("map", {
+    center: [location],
+    layers: L.mapquest.tileLayer("map"),
+    zoom: 14,
+  });
+  var city = $("#zipcode").val();
+  L.mapquest.geocoding().geocode(city, function (error, result) {
+    console.log(result);
+    currentLocation = result.results[0].locations[0].latLng;
+    console.log(currentLocation);
+    restaurantsByCategory();
+    
+  });
+});
 function restaurantsByCategory(event){
   event.preventDefault();
   var location = `${currentLocation.latitude}, ${currentLocation.longitude}`;
