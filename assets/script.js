@@ -114,7 +114,8 @@ function restaurantsByCategory(event){
       });
       L.mapquest.geocoding().geocode(restaurants[0].venue.location.formattedAddress.join(','));
       $('.modal-card-body').append(`
-      <div class="restaurant-name">${restaurants[0].venue.name}</div>
+        <div class="restaurant-name">${restaurants[0].venue.name}</div>
+        <div class="restaurant-address">${restaurants[0].venue.location.formattedAddress}
       `);
     //  restaurants.forEach((restaurant) => {
     //    var currentRestaurant = restaurant.venue;
