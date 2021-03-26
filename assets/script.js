@@ -64,23 +64,24 @@ $(submitButton).click(restaurantsByCategory)
 //   var val = $(this).val();
 //   foodCategory.push(val);
 // });
-$(submitButton).click(function (event) {
-  event.preventDefault();
-  L.mapquest.key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
-  var map = L.mapquest.map("map", {
-    center: [location],
-    layers: L.mapquest.tileLayer("map"),
-    zoom: 14,
-  });
-  var city = $("#zipcode").val();
-  L.mapquest.geocoding().geocode(city, function (error, result) {
-    console.log(result);
-    currentLocation = result.results[0].locations[0].latLng;
-    console.log(currentLocation);
-    restaurantsByCategory();
+// $(submitButton).click(function (event) {
+//   event.preventDefault();
+//   L.mapquest.key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
+//   var map = L.mapquest.map("map", {
+//     center: [0, 0],
+//     layers: L.mapquest.tileLayer("map"),
+//     zoom: 14,
+//   });
+//   console.log(map)
+  // var city = $("#zipcode").val();
+  // L.mapquest.geocoding().geocode(city, function (error, result) {
+  //   console.log(result);
+  //   currentLocation = result.results[0].locations[0].latLng;
+  //   console.log(currentLocation);
+  //   restaurantsByCategory();
     
-  });
-});
+  // });
+// });
 function restaurantsByCategory(event){
   event.preventDefault();
   var location = `${currentLocation.latitude}, ${currentLocation.longitude}`;
@@ -97,7 +98,7 @@ function restaurantsByCategory(event){
     // all restaurants
      var restaurants = data.response.groups[0].items;
      // city equivalent
-     var location = data.response.headerLocation;
+     var locationFromData = data.response.headerLocation;
      var filterBy = data.response.suggestedFilters.filters;
      console.log(restaurants, location, filterBy);
      $(".modal").addClass("is-active")
@@ -105,11 +106,18 @@ function restaurantsByCategory(event){
     //  if (feelingLucky) {
     //    restaurants[0]
     //  }
+    L.mapquest.key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
+      var map = L.mapquest.map("map", {
+        center: [restaurants[0].venue.location.lat, restaurants[0].venue.location.lng],
+        layers: L.mapquest.tileLayer("map"),
+        zoom: 14,
+      });
+      L.mapquest.geocoding().geocode(restaurants[0].venue.location.formattedAddress.join(','));
      restaurants.forEach((restaurant) => {
        var currentRestaurant = restaurant.venue;
        var restaurantAddress = currentRestaurant.location;
        var restaurantName = currentRestaurant.name;
-      $('.modal-card-body').html(`
+      $('.modal-card-body').append(`
       <div class="restaurant-name">${restaurantName}</div>
       `);
      })
