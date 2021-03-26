@@ -25,7 +25,10 @@ header::after{
     text-transform: lowercase;
     
 }
-
+.modal1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: larger;
+}
 .slogan{
     color: black;
 }
