@@ -113,14 +113,17 @@ function restaurantsByCategory(event){
         zoom: 14,
       });
       L.mapquest.geocoding().geocode(restaurants[0].venue.location.formattedAddress.join(','));
-     restaurants.forEach((restaurant) => {
-       var currentRestaurant = restaurant.venue;
-       var restaurantAddress = currentRestaurant.location;
-       var restaurantName = currentRestaurant.name;
       $('.modal-card-body').append(`
-      <div class="restaurant-name">${restaurantName}</div>
+      <div class="restaurant-name">${restaurants[0].venue.name}</div>
       `);
-     })
+    //  restaurants.forEach((restaurant) => {
+    //    var currentRestaurant = restaurant.venue;
+    //    var restaurantAddress = currentRestaurant.location;
+    //    var restaurantName = currentRestaurant.name;
+    //   $('.modal-card-body').html(`
+    //   <div class="restaurant-name">${restaurantName}</div>
+    //   `);
+    //  })
     },
     error: function(jqXHR, textStatus, errorThrown) {
       // Code for handling errors
