@@ -58,6 +58,8 @@ $("#palestinian").click(function (event) {
 // Function to fetch restaurants based on user-specified criteria
 // use categoryIds
 $(submitButton).click(restaurantsByCategory)
+$(randomButton).click(getRandomResturant)
+     
 // $('[type="checkbox"]').on('change', function(event) {
 //   console.log(event);
 //   event.preventDefault();
@@ -68,7 +70,7 @@ $(submitButton).click(restaurantsByCategory)
 
 function restaurantsByCategory(event){
   event.preventDefault();
-  var location = `${currentLocation.latitude}, ${currentLocation.longitude}`;
+  var location = "33.06763348808326, -96.68643319934618"
   var radius = 8046;
   if (foodCategory.length === 0) {
     foodCategory.push('4bf58dd8d48988d1c1941735');
@@ -84,6 +86,7 @@ function restaurantsByCategory(event){
      var randomNumber = Math.floor(Math.random()*restaurants.length)
     var randomRestaurant = restaurants[randomNumber]
     console.log(randomRestaurant)
+    
      
      // city equivalent
      var location = data.response.headerLocation;
@@ -139,5 +142,50 @@ getLocation();
 // Function for pop-up modal that displays random restaurant info
 
 //
+function getRandomResturant(event){
+  event.preventDefault();
+  var location = "33.06763348808326, -96.68643319934618"
+  var radius = 8046;
+  if (foodCategory.length === 0) {
+    foodCategory.push('4bf58dd8d48988d1c1941735');
+  }
+  $.ajax({
+    dataType: "json",
+    url: `https://api.foursquare.com/v2/venues/explore?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20180323&categoryId=${foodCategory.join(',')}&limit=10&ll=${location}&radius=${radius}`,
+    success: function( data ) {
+      // Code for handling API response
+    $('.modal-card-body').html();
+    // all restaurants
+     var restaurants = data.response.groups[0].items;
+     var randomNumber = Math.floor(Math.random()*restaurants.length)
+    var randomRestaurant = restaurants[randomNumber]
+    console.log(randomRestaurant)
+    
+     
+     // city equivalent
+     var location = data.response.headerLocation;
+     var filterBy = data.response.suggestedFilters.filters;
+     console.log(restaurants, location, filterBy);
+     $(".modal").addClass("is-active")
 
+    //  if (feelingLucky) {
+    //    restaurants[0]
+    //  }
+
+    $('.modal-card-body').html(`
+        <div class="restaurant-name">${randomRestaurant[0].venue.name}</div>
+        `);
+      $('.modal-card-body').html(`
+      <div class="restaurant-name">${restaurantName}</div>
+      `);
+     })
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      // Code for handling errors
+    console.log(jqXHR, textStatus, errorThrown);
+    }
+    // Checkbox click to this function
+    // target checkboxes
+  })
+};
 
