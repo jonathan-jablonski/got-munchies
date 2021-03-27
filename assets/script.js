@@ -1,8 +1,13 @@
 // MapQuest API
 // clientSecret = "77gRNKAyNsP05LND";
 // key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
+
 var randomButton = document.getElementById ("submitRandom1")
 var submitButton = document.getElementById("submit")
+=======
+
+var submitButton = document.getElementsByClassName("submit")
+
 var zipCode = $("#zipcode")
 var CLIENT_ID =  "SQM3255VG0KCQPCFOPM5RF1S3S22Q2BMNV3OUZEHT4QIQA2H"
 var CLIENT_SECRET = "1NDCPEPMM5FJQV4HHXKQOLFGHOD54VE2DBSKFG41CUQBHLJ4"
@@ -55,6 +60,7 @@ $("#palestinian").click(function (event) {
 //     });
 // });
 
+
 // Function to fetch restaurants based on user-specified criteria
 // use categoryIds
 $(submitButton).click(restaurantsByCategory)
@@ -70,7 +76,7 @@ $(randomButton).click(getRandomResturant)
 
 function restaurantsByCategory(event){
   event.preventDefault();
-  var location = "33.06763348808326, -96.68643319934618"
+  var location = `${currentLocation.latitude}, ${currentLocation.longitude}`;
   var radius = 8046;
   if (foodCategory.length === 0) {
     foodCategory.push('4bf58dd8d48988d1c1941735');
@@ -145,6 +151,39 @@ getLocation();
 function getRandomRestaurant(event){
   event.preventDefault();
   var location = "33.06763348808326, -96.68643319934618";
+=======
+
+// Function to fetch restaurants based on user-specified criteria
+// use categoryIds
+$(submitButton).click(restaurantsByCategory)
+// $('[type="checkbox"]').on('change', function(event) {
+//   console.log(event);
+//   event.preventDefault();
+//   var val = $(this).val();
+//   foodCategory.push(val);
+// });
+// $(submitButton).click(function (event) {
+//   event.preventDefault();
+//   L.mapquest.key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
+//   var map = L.mapquest.map("map", {
+//     center: [0, 0],
+//     layers: L.mapquest.tileLayer("map"),
+//     zoom: 14,
+//   });
+//   console.log(map)
+  // var city = $("#zipcode").val();
+  // L.mapquest.geocoding().geocode(city, function (error, result) {
+  //   console.log(result);
+  //   currentLocation = result.results[0].locations[0].latLng;
+  //   console.log(currentLocation);
+  //   restaurantsByCategory();
+    
+  // });
+// });
+function restaurantsByCategory(event){
+  event.preventDefault();
+  var location = `${currentLocation.latitude}, ${currentLocation.longitude}`;
+
   var radius = 8046;
   if (foodCategory.length === 0) {
     foodCategory.push('4bf58dd8d48988d1c1941735');
@@ -157,6 +196,7 @@ function getRandomRestaurant(event){
     $('.modal-card-body').html();
     // all restaurants
      var restaurants = data.response.groups[0].items;
+
      var randomNumber = Math.floor(Math.random()*restaurants.length)
     var randomRestaurant = restaurants[randomNumber]
     console.log(randomRestaurant)
@@ -171,6 +211,36 @@ function getRandomRestaurant(event){
     //  if (feelingLucky) {
     //    restaurants[0]
     //  }
+
+     // city equivalent
+     var locationFromData = data.response.headerLocation;
+     var filterBy = data.response.suggestedFilters.filters;
+     console.log(restaurants, location, filterBy);
+     $(".modal").addClass("is-active")
+
+    //  if (feelingLucky) {
+    //    restaurants[0]
+    //  }
+    L.mapquest.key = "U5hUKGkBeBR1qSw1yecgBx0flv6hjfMR";
+      var map = L.mapquest.map("map", {
+        center: [restaurants[0].venue.location.lat, restaurants[0].venue.location.lng],
+        layers: L.mapquest.tileLayer("map"),
+        zoom: 14,
+      });
+      L.mapquest.geocoding().geocode(restaurants[0].venue.location.formattedAddress.join(','));
+      $('.modal-card-body').append(`
+        <div class="restaurant-name">${restaurants[0].venue.name}</div>
+        <div class="restaurant-address">${restaurants[0].venue.location.formattedAddress}
+      `);
+    //  restaurants.forEach((restaurant) => {
+    //    var currentRestaurant = restaurant.venue;
+    //    var restaurantAddress = currentRestaurant.location;
+    //    var restaurantName = currentRestaurant.name;
+    //   $('.modal-card-body').html(`
+    //   <div class="restaurant-name">${restaurantName}</div>
+    //   `);
+    //  })
+
     },
     error: function(jqXHR, textStatus, errorThrown) {
       // Code for handling errors
@@ -179,4 +249,33 @@ function getRandomRestaurant(event){
     // Checkbox click to this function
     // target checkboxes
   })
+
 };
+
+};
+$(".buttonCancelModal").click(function(){
+    $(".modal1").removeClass("is-active");
+});
+function getLocation() {
+  if (navigator.geolocation) {
+    currentLocation = navigator.geolocation.getCurrentPosition(showPosition);
+  }
+}
+function showPosition(position) {
+  currentLocation = position.coords
+  console.log(currentLocation);
+}
+getLocation();
+// Function to randomly select a restaurant from an array
+// After we have gotten our user's choices from foursquare, 
+// Feeling lucky submit button
+// Try Again? Start Over?
+
+
+// Function that fetches map of restaurant's latitude and longitude - run with mapquest and at the time of submission
+
+
+// Function for pop-up modal that displays restaurant, address, map of surrounding area
+
+// Function for pop-up modal that displays random restaurant info
+

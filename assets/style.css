@@ -13,7 +13,9 @@ header::after{
     clear: both;
 
 }
-
+.restaurant-name {
+    color: dodgerblue;
+}
 .got-munchies{
     text-align: center;
     margin: auto;
@@ -24,8 +26,19 @@ header::after{
     
 }
 
+.submit{
+    font-family: 'Pathway Gothic One', sans-serif;
+    width: 100px;
+    
+}
+
+.modal1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: larger;
+}
 .slogan{
     color: black;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 
 nav ul{
@@ -45,18 +58,24 @@ nav a{
     text-transform: uppercase;
 
 }
+
+.container{
+    font-family: 'Pathway Gothic One', sans-serif;
+    justify-content: center;
+    font-size: large;
+}
 label{
     padding-left: 10px;
     margin-left: 5px;
 }
 
-.zipcode{
+.cityName{
     display: flex;
     justify-content: center;
     margin: 5px;
 }
 
-#zipcode{
+#cityName{
     border-radius: 15px;
 }
 
@@ -83,8 +102,15 @@ label{
     justify-content: center;
 }
 .form{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: medium;
     padding: 10px;
     
+}
+.whatchaFeeling{
+    margin-left: 15px;
+    margin-right: 50px;
+
 }
 
 .restriction{
@@ -104,6 +130,11 @@ label{
 #vegan, #vegetarian, #keto, #paleo, #pescatarian, #kosher{
     position: relative;
     bottom: 1.5rem;
+}
+
+.submitDiv{
+    display: flex;
+    justify-content: center;
 }
 
 
