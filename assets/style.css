@@ -13,6 +13,11 @@ header::after{
     clear: both;
 
 }
+
+.footer{
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
 .restaurant-name {
     color: dodgerblue;
 }
