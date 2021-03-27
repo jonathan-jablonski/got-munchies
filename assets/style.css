@@ -13,7 +13,10 @@ header::after{
     clear: both;
 
 }
-
+.modal-card-body {
+    overflow: auto;
+    height: 100%;
+}
 .footer{
     font-family: 'Pathway Gothic One', sans-serif;
     margin-top: 160px;
@@ -164,3 +167,5 @@ label{
         background-color: beige;
     }
 }
+
+#map { z-index: 1;}
