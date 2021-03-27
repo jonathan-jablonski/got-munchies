@@ -142,9 +142,9 @@ getLocation();
 // Function for pop-up modal that displays random restaurant info
 
 //
-function getRandomResturant(event){
+function getRandomRestaurant(event){
   event.preventDefault();
-  var location = "33.06763348808326, -96.68643319934618"
+  var location = "33.06763348808326, -96.68643319934618";
   var radius = 8046;
   if (foodCategory.length === 0) {
     foodCategory.push('4bf58dd8d48988d1c1941735');
@@ -160,25 +160,17 @@ function getRandomResturant(event){
      var randomNumber = Math.floor(Math.random()*restaurants.length)
     var randomRestaurant = restaurants[randomNumber]
     console.log(randomRestaurant)
-    
-     
+    $('.modal-card-body').html(`
+        <div class="restaurant-name">${randomRestaurant[0].venue.name}</div>
+       `);
      // city equivalent
      var location = data.response.headerLocation;
      var filterBy = data.response.suggestedFilters.filters;
      console.log(restaurants, location, filterBy);
      $(".modal").addClass("is-active")
-
     //  if (feelingLucky) {
     //    restaurants[0]
     //  }
-
-    $('.modal-card-body').html(`
-        <div class="restaurant-name">${randomRestaurant[0].venue.name}</div>
-        `);
-      $('.modal-card-body').html(`
-      <div class="restaurant-name">${restaurantName}</div>
-      `);
-     })
     },
     error: function(jqXHR, textStatus, errorThrown) {
       // Code for handling errors
@@ -188,4 +180,3 @@ function getRandomResturant(event){
     // target checkboxes
   })
 };
-
