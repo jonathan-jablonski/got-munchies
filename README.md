@@ -30,5 +30,5 @@ WHEN the user clicks the random button
 THEN they will be presented with a random restaurant, its address, and surrounding map of the area.
 
 
-#URL TO DEPLOYED GITHUB PAGE:
+# URL TO DEPLOYED GITHUB PAGE:
 https://jonathan-jablonski.github.io/got-munchies/
