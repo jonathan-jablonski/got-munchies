@@ -2,7 +2,7 @@
 
 As a HUNGRY CONSUMER,
 
-I would like to FIND a restaurant that suits my requirements for distance, dietary restrictions, and/or craved style of food.
+I would like to FIND a restaurant that suits my requirements for distance and/or craved style of food.
 
 SO THAT I can decide what to eat while broadening my horizons on local restaurants.
 
@@ -32,3 +32,9 @@ THEN they will be presented with a random restaurant, its address, and surroundi
 
 # URL TO DEPLOYED GITHUB PAGE:
 https://jonathan-jablonski.github.io/got-munchies/
+
+# CONTRIBUTING AUTHORS
+Ayda Negash, Ashley Salinas, Jonathan Jablonski, and Ramon Alvarado.
+
+# FUTURE DEVELOPMENTS
+* Introduction of dietary restriction selection menu
